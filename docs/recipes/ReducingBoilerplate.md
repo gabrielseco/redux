@@ -49,7 +49,7 @@ dispatch({
 })
 ```
 
-You might write an action creator in a separate file, and import it from your component:
+You might write an action creator in a separate file, and import it into your component:
 
 #### `actionCreators.js`
 
@@ -73,7 +73,7 @@ dispatch(addTodo('Use Redux'))
 
 Action creators have often been criticized as boilerplate. Well, you don't have to write them! **You can use object literals if you feel this better suits your project.** There are, however, some benefits for writing action creators you should know about.
 
-Let's say a designer comes back to us after reviewing our prototype, and tells that we need to allow three todos maximum. We can enforce this by rewriting our action creator to a callback form with [redux-thunk](https://github.com/gaearon/redux-thunk) middleware and adding an early exit:
+Let's say a designer comes back to us after reviewing our prototype, and tells us that we need to allow three todos maximum. We can enforce this by rewriting our action creator to a callback form with [redux-thunk](https://github.com/gaearon/redux-thunk) middleware and adding an early exit:
 
 ```js
 function addTodoWithoutCheck(text) {
